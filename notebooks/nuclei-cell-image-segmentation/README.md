@@ -1,6 +1,6 @@
 # Nuclei Image Segmentation With UNets
 
-Reproduces the results in [Blog Entry](#).
+Reproduces the results in [Blog Entry](https://www.thomasjpfan.com/2018/07/nuclei-image-segmentation-tutorial/).
 
 ## Setup
 
