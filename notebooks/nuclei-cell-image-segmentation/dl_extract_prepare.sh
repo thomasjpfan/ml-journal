@@ -8,7 +8,7 @@ else
 fi
 
 if [ ! -d "data/cells" ]; then
-	printf "Unzipping datasets/stage1_train.zip to data/cells\n"
+	printf "Unzipping data/stage1_train.zip to data/cells\n"
 	mkdir -p data/cells
 	unzip data/stage1_train.zip -d data/cells
 else
