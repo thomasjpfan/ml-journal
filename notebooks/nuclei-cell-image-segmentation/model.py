@@ -8,8 +8,10 @@ def make_decoder_block(in_channels, middle_channels, out_channels):
         nn.Conv2d(in_channels, middle_channels, 3, padding=1),
         nn.ReLU(inplace=True),
         nn.ConvTranspose2d(
-            middle_channels, out_channels, kernel_size=4, stride=2, padding=1),
-        nn.ReLU(inplace=True))
+            middle_channels, out_channels, kernel_size=4, stride=2, padding=1
+        ),
+        nn.ReLU(inplace=True),
+    )
 
 
 class UNet(nn.Module):
@@ -39,15 +41,16 @@ class UNet(nn.Module):
         self.conv5 = encoder[33:43]
 
         self.center = nn.Sequential(
-            encoder[43],  # MaxPool
-            make_decoder_block(512, 512, 256))
+            encoder[43], make_decoder_block(512, 512, 256)  # MaxPool
+        )
 
         self.dec5 = make_decoder_block(256 + 512, 512, 256)
         self.dec4 = make_decoder_block(256 + 512, 512, 256)
         self.dec3 = make_decoder_block(256 + 256, 256, 64)
         self.dec2 = make_decoder_block(64 + 128, 128, 32)
         self.dec1 = nn.Sequential(
-            nn.Conv2d(32 + 64, 32, 3, padding=1), nn.ReLU(inplace=True))
+            nn.Conv2d(32 + 64, 32, 3, padding=1), nn.ReLU(inplace=True)
+        )
         self.final = nn.Conv2d(32, 1, kernel_size=1)
 
     def forward(self, x):
