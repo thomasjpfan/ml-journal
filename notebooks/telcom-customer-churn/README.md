@@ -1,6 +1,6 @@
 # Survival Analysis on Employee Turnover
 
-Reproduces the results in [Blog Entry](#)
+Reproduces the results in [Blog Entry](https://www.thomasjpfan.com/2018/09/survival-regression-analysis-on-customer-churn/)
 
 ## Setup
 
