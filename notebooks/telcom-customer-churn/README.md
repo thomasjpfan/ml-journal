@@ -10,5 +10,5 @@ Reproduces the results in [Blog Entry](https://www.thomasjpfan.com/2018/09/survi
 
 ## Running the notebook
 
-1. Start jupyter notebook `jupyter notebook`.
+1. Start jupyter lab `jupyter lab`.
 1. Open `notebook.ipynb`.
