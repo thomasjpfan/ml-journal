@@ -1,6 +1,6 @@
 matplotlib==3.4.1
 kaggle==1.5.12
-jupyterlab==3.0.14
+jupyterlab==3.0.17
 lifelines==0.25.11
 seaborn==0.11.1
 scikit-learn==0.24.2
